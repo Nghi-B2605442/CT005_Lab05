@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f4f7f5">
+	<meta name="description" content="Xem infographic Lab 05 và phát video YouTube trực tiếp trên trang.">
+	<title>Infographic và video | Lab 05, Ex 3.1</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--ink: #18312c;
+			--muted: #5d706b;
+			--paper: #f4f7f5;
+			--surface: #ffffff;
+			--accent: #137c68;
+			--line: #dce7e2;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			background: var(--paper);
+			color: var(--ink);
+			font-family: "Segoe UI", Arial, sans-serif;
+			line-height: 1.6;
+		}
+
+		.page {
+			width: min(100% - 36px, 1080px);
+			margin: 0 auto;
+			padding: 52px 0 64px;
+		}
+
+		.intro {
+			margin-bottom: 28px;
+			border-bottom: 1px solid var(--line);
+			padding-bottom: 22px;
+		}
+
+		.eyebrow {
+			margin: 0 0 8px;
+			color: var(--accent);
+			font-size: 0.78rem;
+			font-weight: 700;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+
+		h1, h2, p { margin-top: 0; }
+
+		h1 {
+			margin-bottom: 8px;
+			font-size: clamp(2rem, 5vw, 3.4rem);
+			line-height: 1.12;
+		}
+
+		.intro p:last-child {
+			max-width: 680px;
+			margin-bottom: 0;
+			color: var(--muted);
+		}
+
+		.section-heading {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 16px;
+			margin: 0 0 14px;
+		}
+
+		h2 {
+			margin-bottom: 0;
+			font-size: 1.35rem;
+		}
+
+		.section-note {
+			margin-bottom: 0;
+			color: var(--muted);
+			font-size: 0.9rem;
+		}
+
+		.panel {
+			overflow: hidden;
+			border: 1px solid var(--line);
+			border-radius: 8px;
+			background: var(--surface);
+		}
+
+		.infographic-panel {
+			padding: 16px;
+			text-align: center;
+		}
+
+		.infographic-panel img {
+			display: block;
+			width: 100%;
+			height: auto;
+			max-height: 78vh;
+			object-fit: contain;
+			margin: 0 auto;
+		}
+
+		.video-section { margin-top: 36px; }
+
+		.video-frame {
+			position: relative;
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			background: #10231f;
+		}
+
+		.video-frame iframe {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+
+		.video-link {
+			display: inline-block;
+			margin-top: 12px;
+			color: var(--accent);
+			font-weight: 650;
+			text-underline-offset: 3px;
+		}
+
+		.video-link:hover { color: #0b5d4e; }
+
+		footer {
+			margin-top: 40px;
+			border-top: 1px solid var(--line);
+			padding-top: 16px;
+			color: var(--muted);
+			font-size: 0.875rem;
+		}
+
+		footer p { margin-bottom: 0; }
+
+		@media (max-width: 600px) {
+			.page { width: min(100% - 24px, 1080px); padding-top: 34px; }
+			.section-heading { display: block; }
+			.section-note { margin-top: 4px; }
+			.infographic-panel { padding: 8px; }
+		}
+	</style>
+</head>
+<body>
+	<main class="page">
+		<header class="intro">
+			<p class="eyebrow">Lab 05 · Ex 3.1</p>
+			<h1>Infographic và video</h1>
+			<p>Khám phá nội dung qua infographic bên dưới, sau đó xem video ngay trên trang.</p>
+		</header>
+
+		<section aria-labelledby="infographic-title">
+			<div class="section-heading">
+				<h2 id="infographic-title">Infographic</h2>
+				<p class="section-note">Hình ảnh: Lab05_Ex2.1.png</p>
+			</div>
+			<div class="panel infographic-panel">
+				<img src="Lab05_Ex2.1.png" alt="Infographic Lab 05, bài tập 2.1" loading="lazy">
+			</div>
+		</section>
+
+		<section class="video-section" aria-labelledby="video-title">
+			<div class="section-heading">
+				<h2 id="video-title">Video YouTube</h2>
+				<p class="section-note">Nhấn nút phát để xem video.</p>
+			</div>
+			<div class="panel video-frame">
+				<iframe
+					src="https://www.youtube.com/embed/lQ-yzy55Yd0"
+					title="Video YouTube"
+					loading="lazy"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen>
+				</iframe>
+			</div>
+			<a class="video-link" href="https://www.youtube.com/watch?v=lQ-yzy55Yd0" target="_blank" rel="noopener noreferrer">Mở video trên YouTube</a>
+		</section>
+
+		<footer>
+			<p>Bản quyền hình ảnh và video thuộc về chủ sở hữu tương ứng. Nội dung được trình bày cho mục đích học tập.</p>
+			<p>AI GitHub Copilot-VS Code</p>
+		</footer>
+	</main>
+</body>
+</html>
